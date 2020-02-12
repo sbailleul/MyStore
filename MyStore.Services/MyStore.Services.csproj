@@ -9,7 +9,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>..\Store.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>C:\Users\Mel\OneDrive\Projects\Pluralsight\test-data-generation\Source\Demo\Store.Services\Store.Services.xml</DocumentationFile>
+    <DocumentationFile>.\Store.Services.xml</DocumentationFile>
     <NoWarn>1591;1701;1702</NoWarn>
   </PropertyGroup>
 
@@ -18,8 +18,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Store.Services.csproj.DotSettings" />
-    <None Remove="Store.Services.xml" />
+    <None Remove="MyStore.Services.csproj.DotSettings" />
+    <None Remove="MyStore.Services.xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,8 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Store.Common\Store.Common.csproj" />
-    <ProjectReference Include="..\Store.Domain\Store.Domain.csproj" />
+    <ProjectReference Include="..\MyStore.Common\MyStore.Common.csproj" />
+    <ProjectReference Include="..\MyStore.Domain\MyStore.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Store.Services</name>
+        <name>MyStore.Services</name>
     </assembly>
     <members>
         <member name="T:Store.Services.Contracts.Status.StatusGetResponse">

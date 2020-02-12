@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Shouldly;
 using Store.Domain.Models;
+using Store.Tests.Unit.Framework.Builders;
 
 namespace Store.Tests.Unit.DomainTests.RepositoryTests.StateRepositoryTests
 {
@@ -15,12 +15,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.StateRepositoryTests
         {
             base.Given();
 
-            _model = new State
-            {
-                Abbreviation = "YY",
-                Name = "New State",
-                Description = "Unexpected, but welcome"
-            };
+            _model = StateBuilder.Simple().Build();
         }
 
         protected override void When()
@@ -33,7 +28,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.StateRepositoryTests
         [Test]
         public void Then_the_new_State_should_have_an_Id()
         {
-            _result.Id.ShouldBe(SUT.StoreContext.States.OrderByDescending(x => x.Id).First().Id);
+            _result.Id.ShouldBeGreaterThan(0);
         }
     }
 }

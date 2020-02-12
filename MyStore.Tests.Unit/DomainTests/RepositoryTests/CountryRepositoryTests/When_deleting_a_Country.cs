@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using Store.Domain.Models;
+using Store.Tests.Unit.Framework.Builders;
 
 namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
 {
@@ -12,11 +13,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
         {
             base.Given();
 
-            var model = new Country
-            {
-                Name = "New Country",
-                Description = "New Country"
-            };
+            var model = CountryBuilder.Typical().Build();
 
             _model = SUT.AddAsync(AdminUserId, model).Result;
             Assert.IsNotNull(SUT.GetAsync(AdminUserId, _model.Id).Result);

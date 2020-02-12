@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using Shouldly;
 using Store.Domain.Models;
+using Store.Tests.Unit.Framework.Builders;
 
 namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
 {
@@ -9,6 +10,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
     public class When_adding_an_Address_range : Given_an_AddressRepository
     {
         private List<Address> _models;
+        private int _originalCount;
 
         protected override void Given()
         {
@@ -16,23 +18,11 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
 
             _models = new List<Address>
             {
-                new Address
-                {
-                    Line1 = "123 Any St.",
-                    Line2 = "Suite 456",
-                    City = "AnyTown",
-                    StateId = 1,
-                    ZipCode = "12345"
-                },
-                new Address
-                {
-                    Line1 = "456 Other St.",
-                    Line2 = "Suite 123",
-                    City = "OtherTown",
-                    StateId = 2,
-                    ZipCode = "54321"
-                }
+                AddressBuilder.Typical().Build(),
+                AddressBuilder.JoeCustomerShipping().Build()
             };
+
+            _originalCount = SUT.CountAsync().Result;
         }
 
         protected override void When()
@@ -43,9 +33,15 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
         }
 
         [Test]
-        public void Then_the_new_address_should_have_an_Id()
+        public void Then_the_new_addresses_should_have_an_Id()
         {
-            SUT.CountAsync().Result.ShouldBe(4);
+            _models.ForEach(x => x.Id.ShouldBeGreaterThan(0));
+        }
+
+        [Test]
+        public void Then_the_new_addresses_were_added_to_the_table()
+        {
+            SUT.CountAsync().Result.ShouldBe(_originalCount + _models.Count);
         }
     }
 }

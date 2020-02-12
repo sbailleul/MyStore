@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Store.Domain</name>
+        <name>MyStore.Domain</name>
     </assembly>
     <members>
         <member name="T:Store.Domain.Extensions.ServiceCollectionExtensions">

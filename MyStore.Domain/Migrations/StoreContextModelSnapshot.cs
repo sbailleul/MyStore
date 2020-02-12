@@ -25,7 +25,8 @@ namespace Store.Domain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .HasMaxLength(50);
 
                     b.Property<int?>("CreatedById");
 
@@ -36,19 +37,21 @@ namespace Store.Domain.Migrations
 
                     b.Property<DateTime?>("DeletedUtc");
 
-                    b.Property<string>("Line1");
+                    b.Property<string>("Line1")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("Line2");
+                    b.Property<string>("Line2")
+                        .HasMaxLength(50);
 
                     b.Property<int?>("ModifiedById");
 
                     b.Property<DateTime>("ModifiedUtc")
                         .HasColumnType("DateTime2");
 
-                    b.Property<int>("StateId");
-
-                    b.Property<string>("ZipCode")
+                    b.Property<string>("PostalCode")
                         .HasMaxLength(10);
+
+                    b.Property<int>("StateId");
 
                     b.HasKey("Id");
 
@@ -67,8 +70,8 @@ namespace Store.Domain.Migrations
                             Line2 = "123 Any St.",
                             ModifiedById = 1,
                             ModifiedUtc = new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StateId = 1,
-                            ZipCode = "12345"
+                            PostalCode = "12345",
+                            StateId = 1
                         },
                         new
                         {
@@ -80,8 +83,8 @@ namespace Store.Domain.Migrations
                             Line2 = "123 Any St.",
                             ModifiedById = 1,
                             ModifiedUtc = new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            StateId = 1,
-                            ZipCode = "12345"
+                            PostalCode = "12345",
+                            StateId = 1
                         });
                 });
 
@@ -141,6 +144,12 @@ namespace Store.Domain.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
+                    b.Property<string>("PostalCodeLabel")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("StateLabel")
+                        .HasMaxLength(50);
+
                     b.HasKey("Id");
 
                     b.ToTable("Countries");
@@ -151,14 +160,18 @@ namespace Store.Domain.Migrations
                             Id = 1,
                             Abbreviation = "USA",
                             Description = "The United States of America",
-                            Name = "The United States of America"
+                            Name = "The United States of America",
+                            PostalCodeLabel = "PostalCode",
+                            StateLabel = "State"
                         },
                         new
                         {
                             Id = 2,
                             Abbreviation = "CAN",
                             Description = "Canada",
-                            Name = "Canada"
+                            Name = "Canada",
+                            PostalCodeLabel = "Postal Code",
+                            StateLabel = "Province/Territory"
                         });
                 });
 
@@ -541,6 +554,8 @@ namespace Store.Domain.Migrations
 
                     b.Property<string>("Abbreviation");
 
+                    b.Property<int>("CountryId");
+
                     b.Property<string>("Description")
                         .HasMaxLength(255);
 
@@ -550,6 +565,8 @@ namespace Store.Domain.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.ToTable("States");
 
                     b.HasData(
@@ -557,337 +574,484 @@ namespace Store.Domain.Migrations
                         {
                             Id = 1,
                             Abbreviation = "AL",
+                            CountryId = 1,
                             Name = "Alabama"
                         },
                         new
                         {
                             Id = 2,
                             Abbreviation = "AK",
+                            CountryId = 1,
                             Name = "Alaska"
                         },
                         new
                         {
                             Id = 3,
                             Abbreviation = "AZ",
+                            CountryId = 1,
                             Name = "Arizona"
                         },
                         new
                         {
                             Id = 4,
                             Abbreviation = "AR",
+                            CountryId = 1,
                             Name = "Arkansas"
                         },
                         new
                         {
                             Id = 5,
                             Abbreviation = "CA",
+                            CountryId = 1,
                             Name = "California"
                         },
                         new
                         {
                             Id = 6,
                             Abbreviation = "CO",
+                            CountryId = 1,
                             Name = "Colorado"
                         },
                         new
                         {
                             Id = 7,
                             Abbreviation = "CT",
+                            CountryId = 1,
                             Name = "Connecticut"
                         },
                         new
                         {
                             Id = 8,
                             Abbreviation = "DE",
+                            CountryId = 1,
                             Name = "Delaware"
                         },
                         new
                         {
                             Id = 9,
                             Abbreviation = "FL",
+                            CountryId = 1,
                             Name = "Florida"
                         },
                         new
                         {
                             Id = 10,
                             Abbreviation = "GA",
+                            CountryId = 1,
                             Name = "Georgia"
                         },
                         new
                         {
                             Id = 11,
                             Abbreviation = "HI",
+                            CountryId = 1,
                             Name = "Hawaii"
                         },
                         new
                         {
                             Id = 12,
                             Abbreviation = "ID",
+                            CountryId = 1,
                             Name = "Idaho"
                         },
                         new
                         {
                             Id = 13,
                             Abbreviation = "IL",
+                            CountryId = 1,
                             Name = "Illinois"
                         },
                         new
                         {
                             Id = 14,
                             Abbreviation = "IN",
+                            CountryId = 1,
                             Name = "Indiana"
                         },
                         new
                         {
                             Id = 15,
                             Abbreviation = "IA",
+                            CountryId = 1,
                             Name = "Iowa"
                         },
                         new
                         {
                             Id = 16,
                             Abbreviation = "KS",
+                            CountryId = 1,
                             Name = "Kansas"
                         },
                         new
                         {
                             Id = 17,
                             Abbreviation = "KY",
+                            CountryId = 1,
                             Name = "Kentucky"
                         },
                         new
                         {
                             Id = 18,
                             Abbreviation = "LA",
+                            CountryId = 1,
                             Name = "Louisiana"
                         },
                         new
                         {
                             Id = 19,
                             Abbreviation = "ME",
+                            CountryId = 1,
                             Name = "Maine"
                         },
                         new
                         {
                             Id = 20,
                             Abbreviation = "MD",
+                            CountryId = 1,
                             Name = "Maryland"
                         },
                         new
                         {
                             Id = 21,
                             Abbreviation = "MA",
+                            CountryId = 1,
                             Name = "Massachusetts"
                         },
                         new
                         {
                             Id = 22,
                             Abbreviation = "MI",
+                            CountryId = 1,
                             Name = "Michigan"
                         },
                         new
                         {
                             Id = 23,
                             Abbreviation = "MN",
+                            CountryId = 1,
                             Name = "Minnesota"
                         },
                         new
                         {
                             Id = 24,
                             Abbreviation = "MS",
+                            CountryId = 1,
                             Name = "Mississippi"
                         },
                         new
                         {
                             Id = 25,
                             Abbreviation = "MO",
+                            CountryId = 1,
                             Name = "Missouri"
                         },
                         new
                         {
                             Id = 26,
                             Abbreviation = "MT",
+                            CountryId = 1,
                             Name = "Montana"
                         },
                         new
                         {
                             Id = 27,
                             Abbreviation = "NE",
+                            CountryId = 1,
                             Name = "Nebraska"
                         },
                         new
                         {
                             Id = 28,
                             Abbreviation = "NV",
+                            CountryId = 1,
                             Name = "Nevada"
                         },
                         new
                         {
                             Id = 29,
                             Abbreviation = "NH",
+                            CountryId = 1,
                             Name = "New Hampshire"
                         },
                         new
                         {
                             Id = 30,
                             Abbreviation = "NJ",
+                            CountryId = 1,
                             Name = "New Jersey"
                         },
                         new
                         {
                             Id = 31,
                             Abbreviation = "NM",
+                            CountryId = 1,
                             Name = "New Mexico"
                         },
                         new
                         {
                             Id = 32,
                             Abbreviation = "NY",
+                            CountryId = 1,
                             Name = "New York"
                         },
                         new
                         {
                             Id = 33,
                             Abbreviation = "NC",
+                            CountryId = 1,
                             Name = "North Carolina"
                         },
                         new
                         {
                             Id = 34,
                             Abbreviation = "ND",
+                            CountryId = 1,
                             Name = "North Dakota"
                         },
                         new
                         {
                             Id = 35,
                             Abbreviation = "OH",
+                            CountryId = 1,
                             Name = "Ohio"
                         },
                         new
                         {
                             Id = 36,
                             Abbreviation = "OK",
+                            CountryId = 1,
                             Name = "Oklahoma"
                         },
                         new
                         {
                             Id = 37,
                             Abbreviation = "OR",
+                            CountryId = 1,
                             Name = "Oregon"
                         },
                         new
                         {
                             Id = 38,
                             Abbreviation = "PA",
+                            CountryId = 1,
                             Name = "Pennsylvania"
                         },
                         new
                         {
                             Id = 39,
                             Abbreviation = "RI",
+                            CountryId = 1,
                             Name = "Rhode Island"
                         },
                         new
                         {
                             Id = 40,
                             Abbreviation = "SC",
+                            CountryId = 1,
                             Name = "South Carolina"
                         },
                         new
                         {
                             Id = 41,
                             Abbreviation = "SD",
+                            CountryId = 1,
                             Name = "South Dakota"
                         },
                         new
                         {
                             Id = 42,
                             Abbreviation = "TN",
+                            CountryId = 1,
                             Name = "Tennessee"
                         },
                         new
                         {
                             Id = 43,
                             Abbreviation = "TX",
+                            CountryId = 1,
                             Name = "Texas"
                         },
                         new
                         {
                             Id = 44,
                             Abbreviation = "UT",
+                            CountryId = 1,
                             Name = "Utah"
                         },
                         new
                         {
                             Id = 45,
                             Abbreviation = "VT",
+                            CountryId = 1,
                             Name = "Vermont"
                         },
                         new
                         {
                             Id = 46,
                             Abbreviation = "VA",
+                            CountryId = 1,
                             Name = "Virginia"
                         },
                         new
                         {
                             Id = 47,
                             Abbreviation = "WA",
+                            CountryId = 1,
                             Name = "Washington"
                         },
                         new
                         {
                             Id = 48,
                             Abbreviation = "WV",
+                            CountryId = 1,
                             Name = "West Virginia"
                         },
                         new
                         {
                             Id = 49,
                             Abbreviation = "WI",
+                            CountryId = 1,
                             Name = "Wisconsin"
                         },
                         new
                         {
                             Id = 50,
                             Abbreviation = "WY",
+                            CountryId = 1,
                             Name = "Wyoming"
                         },
                         new
                         {
                             Id = 51,
                             Abbreviation = "DC",
+                            CountryId = 1,
                             Name = "District of Columbia"
                         },
                         new
                         {
                             Id = 52,
                             Abbreviation = "AS",
+                            CountryId = 1,
                             Name = "American Samoa"
                         },
                         new
                         {
                             Id = 53,
                             Abbreviation = "GU",
+                            CountryId = 1,
                             Name = "Guam"
                         },
                         new
                         {
                             Id = 54,
                             Abbreviation = "MP",
+                            CountryId = 1,
                             Name = "Northern Mariana Islands"
                         },
                         new
                         {
                             Id = 55,
                             Abbreviation = "PR",
+                            CountryId = 1,
                             Name = "Puerto Rico"
                         },
                         new
                         {
                             Id = 56,
                             Abbreviation = "VI",
+                            CountryId = 1,
                             Name = "U.S. Virgin Islands"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Abbreviation = "AB",
+                            CountryId = 2,
+                            Name = "Alberta"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Abbreviation = "BC",
+                            CountryId = 2,
+                            Name = "British Columbia"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Abbreviation = "MB",
+                            CountryId = 2,
+                            Name = "Manitoba"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Abbreviation = "NB",
+                            CountryId = 2,
+                            Name = "New Brunswick"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Abbreviation = "NL",
+                            CountryId = 2,
+                            Name = "Newfoundland and Labrador"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Abbreviation = "NS",
+                            CountryId = 2,
+                            Name = "Nova Scotia"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Abbreviation = "ON",
+                            CountryId = 2,
+                            Name = "Ontario"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Abbreviation = "PE",
+                            CountryId = 2,
+                            Name = "Prince Edward Island"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Abbreviation = "QC",
+                            CountryId = 2,
+                            Name = "Quebec"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Abbreviation = "SK",
+                            CountryId = 2,
+                            Name = "Saskatchewan"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Abbreviation = "NT",
+                            CountryId = 2,
+                            Name = "Northwest Territories"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Abbreviation = "NU",
+                            CountryId = 2,
+                            Name = "Nunavut"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Abbreviation = "YT",
+                            CountryId = 2,
+                            Name = "Yukon"
                         });
                 });
 
@@ -908,22 +1072,28 @@ namespace Store.Domain.Migrations
 
                     b.Property<DateTime?>("DeletedUtc");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("MiddleName");
+                    b.Property<string>("MiddleName")
+                        .HasMaxLength(50);
 
                     b.Property<int?>("ModifiedById");
 
                     b.Property<DateTime>("ModifiedUtc")
                         .HasColumnType("DateTime2");
 
-                    b.Property<string>("PasswordHash");
+                    b.Property<string>("PasswordHash")
+                        .HasMaxLength(255);
 
-                    b.Property<string>("PhoneNumber");
+                    b.Property<string>("PhoneNumber")
+                        .HasMaxLength(50);
 
-                    b.Property<string>("UserName");
+                    b.Property<string>("UserName")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -1020,6 +1190,14 @@ namespace Store.Domain.Migrations
                     b.HasOne("Store.Domain.Models.ProductStatus", "ProductStatus")
                         .WithMany()
                         .HasForeignKey("ProductStatusId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Store.Domain.Models.State", b =>
+                {
+                    b.HasOne("Store.Domain.Models.Country", "Country")
+                        .WithMany("States")
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

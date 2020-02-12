@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Store.Domain.Migrations
 {
-    public partial class InitialSchema : Migration
+    public partial class M03InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -134,11 +134,11 @@ namespace Store.Domain.Migrations
                     ModifiedUtc = table.Column<DateTime>(type: "DateTime2", nullable: false),
                     DeletedById = table.Column<int>(nullable: true),
                     DeletedUtc = table.Column<DateTime>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Line1 = table.Column<string>(nullable: true),
-                    Line2 = table.Column<string>(nullable: true),
-                    StateId = table.Column<int>(nullable: false),
-                    ZipCode = table.Column<string>(maxLength: 10, nullable: true)
+                    City = table.Column<string>(maxLength: 50, nullable: true),
+                    Line1 = table.Column<string>(maxLength: 50, nullable: true),
+                    Line2 = table.Column<string>(maxLength: 50, nullable: true),
+                    PostalCode = table.Column<string>(maxLength: 10, nullable: true),
+                    StateId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -164,12 +164,12 @@ namespace Store.Domain.Migrations
                     DeletedById = table.Column<int>(nullable: true),
                     DeletedUtc = table.Column<DateTime>(nullable: true),
                     AddressId = table.Column<int>(nullable: true),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    MiddleName = table.Column<string>(nullable: true),
-                    PasswordHash = table.Column<string>(nullable: true),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    UserName = table.Column<string>(nullable: true)
+                    FirstName = table.Column<string>(maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(maxLength: 50, nullable: true),
+                    MiddleName = table.Column<string>(maxLength: 50, nullable: true),
+                    PasswordHash = table.Column<string>(maxLength: 255, nullable: true),
+                    PhoneNumber = table.Column<string>(maxLength: 50, nullable: true),
+                    UserName = table.Column<string>(maxLength: 50, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -367,11 +367,11 @@ namespace Store.Domain.Migrations
 
             migrationBuilder.InsertData(
                 table: "Addresses",
-                columns: new[] { "Id", "City", "CreatedById", "CreatedUtc", "DeletedById", "DeletedUtc", "Line1", "Line2", "ModifiedById", "ModifiedUtc", "StateId", "ZipCode" },
+                columns: new[] { "Id", "City", "CreatedById", "CreatedUtc", "DeletedById", "DeletedUtc", "Line1", "Line2", "ModifiedById", "ModifiedUtc", "PostalCode", "StateId" },
                 values: new object[,]
                 {
-                    { 1, "Anytown", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Billing Dept.", "123 Any St.", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "12345" },
-                    { 2, "Anytown", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Receiving Dept.", "123 Any St.", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "12345" }
+                    { 1, "Anytown", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Billing Dept.", "123 Any St.", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "12345", 1 },
+                    { 2, "Anytown", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, null, "Receiving Dept.", "123 Any St.", 1, new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "12345", 1 }
                 });
 
             migrationBuilder.InsertData(
