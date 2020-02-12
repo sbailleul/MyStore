@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using MyStore.Domain.Models;
 using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
 {
     [TestFixture]
     public class When_getting_all_Countries : Given_a_CountryRepository

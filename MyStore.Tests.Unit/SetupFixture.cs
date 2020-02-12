@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using MyStore.Services;
 using NUnit.Framework;
-using Store.Services;
 
-namespace Store.Tests.Unit
+namespace MyStore.Tests.Unit
 {
     [SetUpFixture]
     public class SetUpFixture

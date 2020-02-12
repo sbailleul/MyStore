@@ -1,7 +1,7 @@
-﻿using Store.Domain.Repositories;
-using Store.Tests.Unit.Framework;
+﻿using MyStore.Domain.Repositories;
+using MyStore.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.OrderRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.OrderRepositoryTests
 {
     public class Given_an_OrderRepository : SpecsForRepository<OrderRepository>
     {

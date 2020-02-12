@@ -1,4 +1,4 @@
-﻿namespace Store.Common.Contracts
+﻿namespace MyStore.Common.Contracts
 {
     public class PagingOptions
     {

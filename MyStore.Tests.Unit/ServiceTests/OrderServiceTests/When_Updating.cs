@@ -1,11 +1,11 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Order;
 using NUnit.Framework;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Order;
 
-namespace Store.Tests.Unit.ServiceTests.OrderServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.OrderServiceTests
 {
     [TestFixture]
     public class When_Updating : SpecsForOrderService

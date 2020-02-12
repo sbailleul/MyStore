@@ -1,14 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Moq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Order;
+using MyStore.Tests.Unit.Framework;
 using NUnit.Framework;
 using Shouldly;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Order;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.ServiceTests.OrderServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.OrderServiceTests
 {
     [TestFixture]
     public class When_Adding : SpecsForOrderService

@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
+using NUnit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
 {
     [TestFixture]
     public class When_deleting_a_Category : Given_a_CategoryRepository
@@ -13,7 +13,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
         {
             base.Given();
 
-            var model = CategoryMother.Typical();
+            var model = CategoryBuilder.Typical().Build();
 
             _model = SUT.AddAsync(AdminUserId, model).Result;
             Assert.IsNotNull(SUT.GetAsync(AdminUserId, _model.Id).Result);

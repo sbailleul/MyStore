@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
 {
     [TestFixture]
     public class When_adding_a_Category : Given_a_CategoryRepository
@@ -15,7 +15,7 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
         {
             base.Given();
 
-            _model = CategoryMother.Typical();
+            _model = CategoryBuilder.Typical().Build();
         }
 
         protected override void When()

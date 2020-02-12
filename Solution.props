@@ -2,10 +2,10 @@
 
 <Project>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>..\Store.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\MyStore.ruleset</CodeAnalysisRuleSet>
 
-    <Company>Store</Company>
-    <Copyright>©2019, Store</Copyright>
+    <Company>MyStore</Company>
+    <Copyright>©2019, MyStore</Copyright>
 
     <Version>1.0.0</Version>
   </PropertyGroup>

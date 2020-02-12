@@ -1,7 +1,7 @@
-﻿using Store.Services.Contracts.State;
-using Store.Services.Framework;
+﻿using MyStore.Services.Contracts.State;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Address
+namespace MyStore.Services.Contracts.Address
 {
     public class AddressDto : Dto
     {

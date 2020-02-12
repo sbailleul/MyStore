@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Runtime.Serialization;
 
-namespace Store.Common.Validation
+namespace MyStore.Common.Validation
 {
     [Serializable]
     public class ValidationException : Exception

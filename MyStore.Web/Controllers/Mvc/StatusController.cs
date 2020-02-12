@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Store.Web.Controllers.Mvc
+namespace MyStore.Web.Controllers.Mvc
 {
     public class StatusController : Controller
     {

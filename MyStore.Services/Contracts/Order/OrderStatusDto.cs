@@ -1,6 +1,6 @@
-﻿using Store.Services.Framework;
+﻿using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Order
+namespace MyStore.Services.Contracts.Order
 {
     public class OrderStatusDto : LookupDto
     {

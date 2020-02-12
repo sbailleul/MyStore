@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Store.Services.Framework;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Extensions
+namespace MyStore.Services.Extensions
 {
     /// <summary>Extensions to the <see cref="IServiceCollection" /> class.</summary>
     public static class ServiceCollectionExtensions

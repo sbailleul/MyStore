@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Store.Services.Contracts.State;
-using Store.Services.Framework;
+using MyStore.Services.Contracts.State;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Country
+namespace MyStore.Services.Contracts.Country
 {
     public class CountryDto : LookupDto
     {

@@ -1,7 +1,7 @@
-﻿using Store.Services.Contracts.Product;
-using Store.Services.Framework;
+﻿using MyStore.Services.Contracts.Product;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Order
+namespace MyStore.Services.Contracts.Order
 {
     public class OrderItemDto : Dto
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Store.Domain.Migrations
+namespace MyStore.Domain.Migrations
 {
     public partial class RequireCountryonState : Migration
     {

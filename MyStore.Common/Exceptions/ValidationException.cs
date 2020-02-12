@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Runtime.Serialization;
-using Store.Common.Contracts;
+using MyStore.Common.Contracts;
 
-namespace Store.Common.Exceptions
+namespace MyStore.Common.Exceptions
 {
     [Serializable]
     public class ValidationException : Exception

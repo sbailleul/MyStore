@@ -1,7 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Services.Contracts.State;
+﻿using MyStore.Domain.Models;
+using MyStore.Services.Contracts.State;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     public class StateDtoMapper : Mapper<State, StateDto>
     {

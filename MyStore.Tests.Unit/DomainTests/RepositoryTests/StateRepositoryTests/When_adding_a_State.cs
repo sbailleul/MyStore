@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Builders;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.StateRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.StateRepositoryTests
 {
     [TestFixture]
     public class When_adding_a_State : Given_a_StateRepository

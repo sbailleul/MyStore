@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using Store.Domain.Framework;
+using MyStore.Domain.Framework;
 
-namespace Store.Domain.Models
+namespace MyStore.Domain.Models
 {
     public class State : Lookup
     {

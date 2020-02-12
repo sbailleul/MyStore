@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Store.Domain.Framework
+namespace MyStore.Domain.Framework
 {
     /// <summary>Base class for all lookups.</summary>
     public abstract class Lookup : Model

@@ -1,6 +1,6 @@
-﻿using Store.Domain.Models;
+﻿using MyStore.Domain.Models;
 
-namespace Store.Tests.Unit.Framework.Mothers
+namespace MyStore.Tests.Unit.Framework.Mothers
 {
     public static class ProductStatusMother
     {

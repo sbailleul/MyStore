@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
 using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
 {
     [TestFixture]
     public class When_adding_a_Category_range : Given_a_CategoryRepository
@@ -18,8 +18,8 @@ namespace Store.Tests.Unit.DomainTests.RepositoryTests.CategoryRepositoryTests
 
             _models = new List<Category>
             {
-                CategoryMother.Simple(),
-                CategoryMother.Simple()
+                CategoryBuilder.Simple().Build(),
+                CategoryBuilder.Simple().Build()
             };
 
             _originalCount = SUT.CountAsync().Result;

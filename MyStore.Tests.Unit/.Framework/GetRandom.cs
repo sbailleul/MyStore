@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace Store.Tests.Unit.Framework
+namespace MyStore.Tests.Unit.Framework
 {
     /// <summary>Creates and returns a variety of random value types.</summary>
     [DebuggerStepThrough]

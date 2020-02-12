@@ -4,14 +4,14 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Moq;
+using MyStore.Common.Contracts;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Services;
+using MyStore.Tests.Unit.Framework;
 using NUnit.Framework;
-using Store.Common.Contracts;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.ServiceTests.ProductServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.ProductServiceTests
 {
     [TestFixture]
     public abstract class SpecsForProductService : SpecsForService<ProductService>

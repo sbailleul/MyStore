@@ -2,12 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Store.Domain.Extensions;
-using Store.Domain.Models;
+using MyStore.Domain.Extensions;
+using MyStore.Domain.Models;
 
-namespace Store.Domain
+namespace MyStore.Domain
 {
-    /// <summary>Performs self-configuration for the Store.Domain project.</summary>
+    /// <summary>Performs self-configuration for the MyStore.Domain project.</summary>
     public static class Startup
     {
         /// <summary>Called by the Web project on startup.</summary>
@@ -24,7 +24,7 @@ namespace Store.Domain
         public static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
             // Retrieve the connection string first so that the retrieval from configuration doesn't become part of the lambda
-            var sqlConnectionString = configuration.GetConnectionString("Store");
+            var sqlConnectionString = configuration.GetConnectionString("MyStore");
             services.AddDbContext<StoreContext>(o => o.UseSqlServer(sqlConnectionString));
             services.AddRepositories();
         }

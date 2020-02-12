@@ -1,10 +1,10 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Services.Contracts.Country;
 using NUnit.Framework;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Services.Contracts.Country;
 
-namespace Store.Tests.Unit.ServiceTests.CountryServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.CountryServiceTests
 {
     [TestFixture]
     public class When_Getting_by_Id : SpecsForCountryService

@@ -2,7 +2,7 @@
 using System.Linq;
 using Humanizer;
 
-namespace Store.Common.Validation
+namespace MyStore.Common.Validation
 {
     public static class ValidationHelper
     {

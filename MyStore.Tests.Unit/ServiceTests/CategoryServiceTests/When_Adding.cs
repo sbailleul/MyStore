@@ -1,14 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Moq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Category;
+using MyStore.Tests.Unit.Framework;
 using NUnit.Framework;
 using Shouldly;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Category;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.ServiceTests.CategoryServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.CategoryServiceTests
 {
     [TestFixture]
     public class When_Adding : SpecsForCategoryService

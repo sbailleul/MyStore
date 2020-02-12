@@ -1,4 +1,4 @@
-﻿namespace Store.Services.Framework
+﻿namespace MyStore.Services.Framework
 {
     public abstract class Response
     {

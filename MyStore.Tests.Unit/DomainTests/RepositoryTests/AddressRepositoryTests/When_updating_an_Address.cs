@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
 {
     [TestFixture]
     public class When_updating_an_Address : Given_an_AddressRepository

@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Mothers;
+using NUnit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.OrderItemRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.OrderItemRepositoryTests
 {
     [TestFixture]
     public class When_deleting_an_OrderItem : Given_an_OrderItemRepository

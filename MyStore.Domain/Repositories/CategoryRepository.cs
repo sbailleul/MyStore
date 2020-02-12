@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
-using Store.Domain.Framework;
-using Store.Domain.Models;
+using MyStore.Domain.Framework;
+using MyStore.Domain.Models;
 
-namespace Store.Domain.Repositories
+namespace MyStore.Domain.Repositories
 {
     public interface ICategoryRepository : IRepository<Category>
     {

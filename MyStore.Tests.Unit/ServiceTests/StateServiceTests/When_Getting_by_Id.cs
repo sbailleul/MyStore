@@ -1,10 +1,10 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Services.Contracts.State;
 using NUnit.Framework;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Services.Contracts.State;
 
-namespace Store.Tests.Unit.ServiceTests.StateServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.StateServiceTests
 {
     [TestFixture]
     public class When_Getting_by_Id : SpecsForStateService

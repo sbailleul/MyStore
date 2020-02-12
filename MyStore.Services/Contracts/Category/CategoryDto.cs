@@ -1,6 +1,6 @@
-﻿using Store.Services.Framework;
+﻿using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Category
+namespace MyStore.Services.Contracts.Category
 {
     public class CategoryDto : LookupDto
     {

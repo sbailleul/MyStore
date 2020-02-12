@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Store.Services.Extensions;
+using MyStore.Services.Extensions;
 
-namespace Store.Services
+namespace MyStore.Services
 {
-    /// <summary>Performs self-configuration for the Store.Services project.</summary>
+    /// <summary>Performs self-configuration for the MyStore.Services project.</summary>
     public class Startup
     {
         /// <summary>Called by the Web project on startup.</summary>

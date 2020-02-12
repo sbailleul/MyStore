@@ -2,14 +2,14 @@
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Store.Common.Contracts;
-using Store.Services;
-using Store.Services.Contracts.State;
-using Store.Web.Framework;
+using MyStore.Common.Contracts;
+using MyStore.Services.Contracts.State;
+using MyStore.Services.Services;
+using MyStore.Web.Framework;
 
-namespace Store.Web.Controllers.Api
+namespace MyStore.Web.Controllers.Api
 {
-    /// <summary>Functionality relating to store management.</summary>
+    /// <summary>Functionality relating to MyStore management.</summary>
     /// <seealso cref="StoreApiController" />
     [ApiVersion("1")]
     [Route("api/v{version:apiVersion}/state")]

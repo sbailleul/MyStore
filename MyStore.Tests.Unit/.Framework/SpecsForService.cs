@@ -1,8 +1,8 @@
-﻿using SpecsFor.StructureMap;
-using Store.Services.Framework;
+﻿using MyStore.Services.Framework;
+using SpecsFor.StructureMap;
 using StructureMap;
 
-namespace Store.Tests.Unit.Framework
+namespace MyStore.Tests.Unit.Framework
 {
     public abstract class SpecsForService<TService> : SpecsFor<TService> where TService : Service
     {

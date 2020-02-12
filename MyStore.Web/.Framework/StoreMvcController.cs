@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Store.Web.Framework
+namespace MyStore.Web.Framework
 {
     public abstract class StoreMvcController : Controller
     {

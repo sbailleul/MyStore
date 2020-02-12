@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Store.Domain.Migrations
+namespace MyStore.Domain.Migrations
 {
     public partial class M03InitialMigration : Migration
     {

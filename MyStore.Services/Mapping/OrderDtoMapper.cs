@@ -1,8 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Services.Contracts.Order;
-using Store.Services.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Services.Contracts.Order;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     public class OrderDtoMapper : Mapper<Order, OrderDto>
     {

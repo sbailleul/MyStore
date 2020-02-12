@@ -1,9 +1,9 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
 using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
 
-namespace Store.Tests.Unit.ServiceTests.CategoryServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.CategoryServiceTests
 {
     [TestFixture]
     public class When_Deleting : SpecsForCategoryService

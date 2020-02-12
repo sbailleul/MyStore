@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Mothers;
 using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.OrderItemRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.OrderItemRepositoryTests
 {
     [TestFixture]
     public class When_adding_an_OrderItem_range : Given_an_OrderItemRepository

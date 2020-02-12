@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.OrderRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.OrderRepositoryTests
 {
     [TestFixture]
     public class When_updating_an_Order : Given_an_OrderRepository

@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Builders;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
+using NUnit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
 {
     [TestFixture]
     public class When_deleting_a_Country : Given_a_CountryRepository

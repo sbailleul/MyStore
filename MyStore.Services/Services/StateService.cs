@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Store.Common.Contracts;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.State;
-using Store.Services.Framework;
-using Store.Services.Mapping;
+using MyStore.Common.Contracts;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.State;
+using MyStore.Services.Framework;
+using MyStore.Services.Mapping;
 
-namespace Store.Services
+namespace MyStore.Services.Services
 {
     public interface IStateService : IService
     {

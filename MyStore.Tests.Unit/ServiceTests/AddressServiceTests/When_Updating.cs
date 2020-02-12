@@ -1,12 +1,12 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Address;
+using MyStore.Tests.Unit.Framework;
 using NUnit.Framework;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Address;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.ServiceTests.AddressServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.AddressServiceTests
 {
     [TestFixture]
     public class When_Updating : SpecsForAddressService

@@ -1,7 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Services.Contracts.Address;
+﻿using MyStore.Domain.Models;
+using MyStore.Services.Contracts.Address;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     public class AddressMapper : Mapper<AddressDto, Address>
     {

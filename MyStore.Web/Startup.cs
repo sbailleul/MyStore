@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyStore.Web.Extensions;
 using Newtonsoft.Json;
-using Store.Web.Extensions;
 
-namespace Store.Web
+namespace MyStore.Web
 {
     public class Startup
     {

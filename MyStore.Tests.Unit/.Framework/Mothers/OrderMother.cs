@@ -1,7 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Builders;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
 
-namespace Store.Tests.Unit.Framework.Mothers
+namespace MyStore.Tests.Unit.Framework.Mothers
 {
     public static class OrderMother
     {

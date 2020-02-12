@@ -3,11 +3,11 @@ using System.Globalization;
 using System.Reflection;
 using System.Runtime.Versioning;
 using System.Threading.Tasks;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Status;
-using Store.Services.Framework;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Status;
+using MyStore.Services.Framework;
 
-namespace Store.Services
+namespace MyStore.Services.Services
 {
     public interface IStatusService
     {

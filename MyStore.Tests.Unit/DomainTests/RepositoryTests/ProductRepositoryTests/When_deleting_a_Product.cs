@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Mothers;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Mothers;
+using NUnit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
 {
     [TestFixture]
     public class When_deleting_a_Product : Given_a_ProductRepository

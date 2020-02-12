@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
 {
     [TestFixture]
     public class When_updating_a_Product : Given_a_ProductRepository

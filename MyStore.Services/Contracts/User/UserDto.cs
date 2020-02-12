@@ -1,6 +1,6 @@
-﻿using Store.Services.Framework;
+﻿using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.User
+namespace MyStore.Services.Contracts.User
 {
     public class UserDto : Dto
     {

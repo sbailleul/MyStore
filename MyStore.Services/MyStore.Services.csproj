@@ -8,13 +8,13 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisRuleSet>..\Store.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>.\Store.Services.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>..\MyStore.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>.\MyStore.Services.xml</DocumentationFile>
     <NoWarn>1591;1701;1702</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <CodeAnalysisRuleSet>..\Store.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\MyStore.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>

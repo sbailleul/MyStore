@@ -1,7 +1,7 @@
-﻿using Store.Domain.Repositories;
-using Store.Tests.Unit.Framework;
+﻿using MyStore.Domain.Repositories;
+using MyStore.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
 {
     public class Given_a_CountryRepository : SpecsForRepository<CountryRepository>
     {

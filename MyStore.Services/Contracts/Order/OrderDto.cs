@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Store.Services.Contracts.Address;
-using Store.Services.Framework;
+using MyStore.Services.Contracts.Address;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Order
+namespace MyStore.Services.Contracts.Order
 {
     public class OrderDto : Dto
     {

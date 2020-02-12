@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Store.Services.Contracts.Country;
-using Store.Services.Framework;
+using MyStore.Services.Contracts.Country;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.State
+namespace MyStore.Services.Contracts.State
 {
     public class StateDto : Dto
     {

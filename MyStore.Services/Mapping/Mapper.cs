@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     /// <summary>Base class for all object-to-object mapper classes.</summary>
     /// <seealso cref="Profile" />

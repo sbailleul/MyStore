@@ -1,14 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Moq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
+using MyStore.Services.Contracts.Product;
+using MyStore.Tests.Unit.Framework;
 using NUnit.Framework;
 using Shouldly;
 using SpecsFor.Core.ShouldExtensions;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
-using Store.Services.Contracts.Product;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.ServiceTests.ProductServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.ProductServiceTests
 {
     [TestFixture]
     public class When_Adding : SpecsForProductService

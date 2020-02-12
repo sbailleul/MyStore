@@ -1,8 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Services.Contracts.Category;
-using Store.Services.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Services.Contracts.Category;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     public class CategoryMapper : Mapper<CategoryDto, Category>
     {

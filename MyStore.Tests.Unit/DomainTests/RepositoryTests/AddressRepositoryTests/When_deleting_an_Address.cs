@@ -1,9 +1,8 @@
-﻿using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework.Builders;
-using Store.Tests.Unit.Framework.Mothers;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework.Builders;
+using NUnit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.AddressRepositoryTests
 {
     [TestFixture]
     public class When_deleting_an_Address : Given_an_AddressRepository

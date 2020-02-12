@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using MyStore.Domain.Models;
 using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.ProductRepositoryTests
 {
     [TestFixture]
     public class When_getting_all_Products : Given_a_ProductRepository

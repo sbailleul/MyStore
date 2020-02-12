@@ -3,9 +3,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Store.Domain.Framework;
+using MyStore.Domain.Framework;
 
-namespace Store.Domain.Models
+namespace MyStore.Domain.Models
 {
     /// <summary>
     /// </summary>

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Store.Common.Contracts;
-using Store.Domain.Models;
+using MyStore.Common.Contracts;
+using MyStore.Domain.Models;
 
-namespace Store.Domain.Framework
+namespace MyStore.Domain.Framework
 {
     public interface IRepository
     {

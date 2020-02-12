@@ -1,7 +1,7 @@
-﻿using Store.Domain.Models;
-using Store.Services.Contracts.Country;
+﻿using MyStore.Domain.Models;
+using MyStore.Services.Contracts.Country;
 
-namespace Store.Services.Mapping
+namespace MyStore.Services.Mapping
 {
     public class CountryDtoMapper : Mapper<Country, CountryDto>
     {

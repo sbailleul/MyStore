@@ -1,7 +1,7 @@
 ﻿using System;
-using Store.Services.Framework;
+using MyStore.Services.Framework;
 
-namespace Store.Services.Contracts.Status
+namespace MyStore.Services.Contracts.Status
 {
     /// <summary>Represents status information about the API.</summary>
     /// <seealso cref="Response" />

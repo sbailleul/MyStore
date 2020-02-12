@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace Store.Web.Extensions
+namespace MyStore.Web.Extensions
 {
     /// <summary>Configuration extensions supporting Swagger integration.</summary>
     public static class SwaggerExtensions
@@ -52,11 +52,11 @@ namespace Store.Web.Extensions
         {
             var info = new Info
             {
-                Title = $"Store API v{description.ApiVersion}",
+                Title = $"MyStore API v{description.ApiVersion}",
                 Version = description.ApiVersion.ToString(),
-                Description = "This is a sample Store API",
+                Description = "This is a sample MyStore API",
                 Contact = new Contact
-                    { Name = "Support", Email = "support@store.com", Url = "http://support.store.com" }
+                    { Name = "Support", Email = "support@MyStore.com", Url = "http://support.MyStore.com" }
             };
 
             return info;

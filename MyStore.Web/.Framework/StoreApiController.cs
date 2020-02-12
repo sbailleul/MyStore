@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Store.Web.Framework
+namespace MyStore.Web.Framework
 {
     [ApiController]
     [Produces("application/json", "application/xml")]

@@ -2,7 +2,7 @@
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Store.Web.Extensions
+namespace MyStore.Web.Extensions
 {
     /// <summary>Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.</summary>
     /// <remarks>

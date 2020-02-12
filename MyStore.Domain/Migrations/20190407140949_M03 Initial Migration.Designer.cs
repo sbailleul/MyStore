@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Store.Domain.Models;
+using MyStore.Domain.Models;
 
-namespace Store.Domain.Migrations
+namespace MyStore.Domain.Migrations
 {
     [DbContext(typeof(StoreContext))]
     [Migration("20190407140949_M03 Initial Migration")]
@@ -21,7 +21,7 @@ namespace Store.Domain.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Store.Domain.Models.Address", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Address", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,7 +90,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Category", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -131,7 +131,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Country", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Country", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -167,7 +167,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Order", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -254,7 +254,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.OrderItem", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.OrderItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -386,7 +386,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.OrderStatus", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.OrderStatus", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -430,7 +430,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Product", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -500,7 +500,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.ProductStatus", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.ProductStatus", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -538,7 +538,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.State", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.State", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -896,7 +896,7 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.User", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -972,71 +972,71 @@ namespace Store.Domain.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Address", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Address", b =>
                 {
-                    b.HasOne("Store.Domain.Models.State", "State")
+                    b.HasOne("MyStore.Domain.Models.State", "State")
                         .WithMany()
                         .HasForeignKey("StateId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Category", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Category", b =>
                 {
-                    b.HasOne("Store.Domain.Models.Category", "ParentCategory")
+                    b.HasOne("MyStore.Domain.Models.Category", "ParentCategory")
                         .WithMany("ChildCategories")
                         .HasForeignKey("ParentCategoryId");
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Order", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Order", b =>
                 {
-                    b.HasOne("Store.Domain.Models.Address", "BillingAddress")
+                    b.HasOne("MyStore.Domain.Models.Address", "BillingAddress")
                         .WithMany()
                         .HasForeignKey("BillingAddressId");
 
-                    b.HasOne("Store.Domain.Models.OrderStatus", "OrderStatus")
+                    b.HasOne("MyStore.Domain.Models.OrderStatus", "OrderStatus")
                         .WithMany()
                         .HasForeignKey("OrderStatusId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Store.Domain.Models.Address", "ShippingAddress")
+                    b.HasOne("MyStore.Domain.Models.Address", "ShippingAddress")
                         .WithMany()
                         .HasForeignKey("ShippingAddressId");
 
-                    b.HasOne("Store.Domain.Models.User", "User")
+                    b.HasOne("MyStore.Domain.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.OrderItem", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.OrderItem", b =>
                 {
-                    b.HasOne("Store.Domain.Models.Order", "Order")
+                    b.HasOne("MyStore.Domain.Models.Order", "Order")
                         .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Store.Domain.Models.Product", "Product")
+                    b.HasOne("MyStore.Domain.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.Product", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.Product", b =>
                 {
-                    b.HasOne("Store.Domain.Models.Category", "Category")
+                    b.HasOne("MyStore.Domain.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Store.Domain.Models.ProductStatus", "ProductStatus")
+                    b.HasOne("MyStore.Domain.Models.ProductStatus", "ProductStatus")
                         .WithMany()
                         .HasForeignKey("ProductStatusId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Store.Domain.Models.User", b =>
+            modelBuilder.Entity("MyStore.Domain.Models.User", b =>
                 {
-                    b.HasOne("Store.Domain.Models.Address", "Address")
+                    b.HasOne("MyStore.Domain.Models.Address", "Address")
                         .WithMany()
                         .HasForeignKey("AddressId");
                 });

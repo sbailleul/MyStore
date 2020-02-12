@@ -1,9 +1,9 @@
 ﻿using System.Linq;
+using MyStore.Domain.Models;
+using MyStore.Domain.Repositories;
 using NUnit.Framework;
-using Store.Domain.Models;
-using Store.Domain.Repositories;
 
-namespace Store.Tests.Unit.ServiceTests.OrderServiceTests
+namespace MyStore.Tests.Unit.ServiceTests.OrderServiceTests
 {
     [TestFixture]
     public class When_Deleting : SpecsForOrderService

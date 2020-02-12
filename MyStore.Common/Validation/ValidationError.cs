@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Store.Common.Validation
+namespace MyStore.Common.Validation
 {
     public class ValidationError
     {

@@ -6,7 +6,7 @@ using Shouldly;
 
 #pragma warning disable IDE0012 // Simplify Names
 
-namespace Store.Tests.Unit.Framework
+namespace MyStore.Tests.Unit.Framework
 {
     [TestFixture]
     public class GetRandomTests

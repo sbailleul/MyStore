@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Store.Domain.Models
+namespace MyStore.Domain.Models
 {
     public partial class StoreContext
     {

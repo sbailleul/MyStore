@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
+using MyStore.Domain.Models;
 using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.UserRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.UserRepositoryTests
 {
     [TestFixture]
     public class When_getting_all_Users : Given_a_UserRepository

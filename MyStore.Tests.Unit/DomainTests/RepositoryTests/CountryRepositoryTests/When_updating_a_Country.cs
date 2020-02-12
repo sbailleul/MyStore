@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using MyStore.Domain.Models;
+using MyStore.Tests.Unit.Framework;
+using NUnit.Framework;
 using Shouldly;
-using Store.Domain.Models;
-using Store.Tests.Unit.Framework;
 
-namespace Store.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
+namespace MyStore.Tests.Unit.DomainTests.RepositoryTests.CountryRepositoryTests
 {
     [TestFixture]
     public class When_updating_a_Country : Given_a_CountryRepository

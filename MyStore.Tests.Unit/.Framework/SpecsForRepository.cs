@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
+using MyStore.Domain.Framework;
+using MyStore.Domain.Models;
 using SpecsFor.StructureMap;
-using Store.Domain.Framework;
-using Store.Domain.Models;
 using StructureMap;
 
-namespace Store.Tests.Unit.Framework
+namespace MyStore.Tests.Unit.Framework
 {
     public abstract class SpecsForRepository<TRepository> : SpecsFor<TRepository> where TRepository : Repository
     {

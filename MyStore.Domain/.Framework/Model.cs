@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Store.Domain.Framework
+namespace MyStore.Domain.Framework
 {
     public interface IModel
     {
